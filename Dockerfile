@@ -15,7 +15,7 @@ FROM scratch
 COPY --from=build --chmod=0555 --chown=0:0 /galene/galene /galene
 
 USER 1000
-WORKDIR /galene
+WORKDIR /data
 VOLUME /galene
 
 EXPOSE 8443
