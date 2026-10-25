@@ -3,7 +3,7 @@ FROM golang:1-alpine AS build
 USER 1000
 WORKDIR /galene
 
-ADD https://github.com/jech/galene.git#550c58ad854c4bf8f6ff5d1d3d2479801c19e21f /galene
+ADD https://github.com/jech/galene.git#e2bc84f26d4f5f92a6deb9cd6cfc27acae2cacc4 /galene
 ARG CGO_ENABLED=0
 ARG GOCACHE=/gocache
 
@@ -21,3 +21,4 @@ VOLUME /galene
 EXPOSE 8443
 
 ENTRYPOINT ["/galene"]
+CMD [ ]
