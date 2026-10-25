@@ -13,10 +13,11 @@ RUN --mount=type=cache,uid=1000,gid=1000,target=/gocache \
 FROM scratch
 
 COPY --from=build --chmod=0555 --chown=0:0 /galene/galene /galene
+COPY --from=build --chmod=0555 --chown=0:0 /galene/static /static
 
 USER 1000
 
 EXPOSE 8443
 
 ENTRYPOINT ["/galene"]
-CMD [ ]
+CMD ["-static", "/static"]
