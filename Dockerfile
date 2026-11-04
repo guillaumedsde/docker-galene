@@ -3,7 +3,7 @@ FROM golang:1-alpine AS build
 USER 1000
 WORKDIR /galene
 
-ADD https://github.com/jech/galene.git#e2bc84f26d4f5f92a6deb9cd6cfc27acae2cacc4 /galene
+ADD https://github.com/jech/galene.git#802197eb41b69cf0729f21ebff620c91aad5ab1a /galene
 ARG CGO_ENABLED=0
 ARG GOCACHE=/gocache
 
